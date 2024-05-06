@@ -15,6 +15,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline'
 import { Button } from './MovingBorder'
 import { AnimatedTooltipPreview } from './AnimatedTooltipDemo'
+import { HeroHighlight } from './HeroHighlight'
 
 export default function Hero() {
   return (
@@ -29,6 +30,7 @@ export default function Hero() {
               aria-hidden="true"
             >
               {/* Illustration */}
+              <HeroHighlight children={undefined}></HeroHighlight>
              
             </div>
 
