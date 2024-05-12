@@ -1,5 +1,7 @@
 import clsx from 'clsx'
 
+import React from 'react'; // Add this line
+
 type ContainerProps<T extends React.ElementType> = {
   as?: T
   className?: string

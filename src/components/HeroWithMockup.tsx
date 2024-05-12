@@ -1,45 +1,56 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import Avatar01 from '@/public/images/avatar-01.jpg'
-import Avatar02 from '@/public/images/avatar-02.jpg'
-import Avatar03 from '@/public/images/avatar-03.jpg'
-import Avatar04 from '@/public/images/avatar-04.jpg'
-import Client01 from '@/public/images/client-01.svg'
-import Client02 from '@/public/images/client-02.svg'
-import Client03 from '@/public/images/client-03.svg'
-import Client04 from '@/public/images/client-04.svg'
-import iPhone from '@/public/images/iphone.png'
-import { RxDiscordLogo } from "react-icons/rx";
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
+"use client"
+import { useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { ArrowRightCircleIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import background from '@/images/background.svg'
-
-
-import { ArrowRightCircleIcon } from '@heroicons/react/24/outline'
-import { Button } from './MovingBorder'
-import { AnimatedTooltipPreview } from './AnimatedTooltipDemo'
 import { HeroHighlight } from './HeroHighlight'
+import { Button } from './MovingBorder'
+import { RxDiscordLogo } from 'react-icons/rx'
+import { AnimatedTooltipPreview } from './AnimatedTooltipDemo'
 
-export default function Hero() {
+const navigation = [
+  { name: 'Product', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
+]
+
+export default function HeroMockup() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <section className="relative">
-      <div className="w-full mx-auto px-8 sm:px-6">
-        <div className="pt-16 pb-12 md:pt-30 md:pb-10">
-          {/* Content */}
-          <div className="relative max-w-full mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
-            {/* Background */}
-            <div
-              className="absolute border-8 border-slate-500 inset-0 bg-gradient-to-br from-black to-slate-900 rounded-4xl -mx-20 -z-10 overflow-hidden mb-12 mt-0 md:mb-0"
-              aria-hidden="true"
+    <>
+    <div className="bg-white"> 
+      <div className="relative isolate pt-14">
+        <svg
+          className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+              width={200}
+              height={200}
+              x="50%"
+              y={-1}
+              patternUnits="userSpaceOnUse"
             >
-              {/* Illustration */}
-              <HeroHighlight children={undefined}></HeroHighlight>
-             
-            </div>
-
-            {/* Content */}
-            <div className="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
+            />
+          </svg>
+          <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+        </svg>
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+        <div className="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
               {/* Copy */}
-              <h1 className="h1 text-7xl font-bold font-display text-slate-100 mb-6" data-aos="fade-right" data-aos-delay="100">
+              <h1 className="h1 text-7xl font-bold font-display text-slate-900 mb-6" data-aos="fade-right" data-aos-delay="100">
                We're not{' '}
                 <span className="font-permanent-marker !font-7xl ml-5 text-red-500 font-normal whitespace-nowrap">
                   A{' '}
@@ -89,14 +100,8 @@ export default function Hero() {
               </div>
               {/* Press logos */}
             </div>
-
-            {/* Image */}
-            <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[40rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
-              <div data-aos="fade-left" data-aos-duration="1100">
-<div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-            
-            
-            <svg viewBox="0 0 366 729" role="img" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+          <svg viewBox="0 0 366 729" role="img" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
               <title>App screenshot</title>
               <defs>
                 <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
@@ -124,13 +129,10 @@ export default function Hero() {
                 />
               </foreignObject>
             </svg>
-          
-            </div>
-            </div>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </>
   )
 }

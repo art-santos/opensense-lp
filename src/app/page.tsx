@@ -1,3 +1,4 @@
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,49 +11,52 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+// import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import auditWizard from '@/images/clients/auditwizard.svg'
+import guardianaudits from '@/images/clients/guardianaudits.svg'
+import immunefi from '@/images/clients/immunefi.svg'
+import olimpx from '@/images/clients/olimpx.svg'
+import trustblock from '@/images/clients/trustblock.svg'
+
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import HeroSection from '@/components/HeroSection'
 import Hero from '@/components/Hero'
+import Carousel from '@/components/Caroussel'
+import HeroMockup from '@/components/HeroWithMockup'
+import Header from '@/components/Header'
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['guardianAudits', guardianaudits, "https://guardianaudits.com/"],
+  ['immunefi', immunefi, "https://immunefi.com/"],
+  ['auditWizard', olimpx, "https://www.olympix.ai/"],
+  ['auditWizard', trustblock, "https://trustblock.io/"],
+  ['auditWizard', auditWizard, "https://www.auditwizard.io/"],
 ]
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24 max-w-[90%] mx-auto rounded-4xl bg-neutral-950 py-10 sm:mt-32 sm:py-24 lg:mt-24">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            We're supported by
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-5"
           >
             {clients.map(([client, logo]) => (
-              <li key={client}>
+              <li key={client} className='mx-auto my-auto justify-center text-center'>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Link href="/">
+                      <Image height={570} width={150} src={logo} alt={client} unoptimized />
+                  </Link>
                 </FadeIn>
               </li>
             ))}
@@ -184,15 +188,10 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <Hero />
-      </Container>
-
-
+    <Header />
+    <HeroMockup />
+      <Carousel />    
       <Clients />
-
-      <CaseStudies caseStudies={caseStudies} />
-
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}

@@ -10,7 +10,7 @@ import { remarkRehypeWrap } from 'remark-rehype-wrap'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
-
+import { withContentlayer } from 'next-contentlayer'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],

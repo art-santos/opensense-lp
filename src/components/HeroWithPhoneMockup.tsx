@@ -21,7 +21,7 @@ export default function HeroWithPhoneMockup() {
 
       <div className="relative isolate pt-14">
         
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-[90%] px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
            
     <HeroHighlight>
@@ -51,10 +51,7 @@ export default function HeroWithPhoneMockup() {
           }}
           className="text-3xl px-4 md:text-4xl lg:text-xl font-bold text-neutral-900 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
         >
-            
-          We're
-          
-          
+           
           <span className="font-permanent-marker text-5xl text-red-600 font-normal whitespace-nowrap">
           {' '}NOT{' '}
                   <span className="inline-flex relative">
