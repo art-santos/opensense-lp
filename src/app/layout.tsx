@@ -39,9 +39,8 @@ const hkgrotesk = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
-  },
+    template: '%s - Opensense',
+    default: 'Opensense - The best blockchain community you will ever find'  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
