@@ -10,23 +10,23 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 // import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import auditWizard from '@/images/clients/auditwizard.svg'
 import guardianaudits from '@/images/clients/guardianaudits.svg'
 import immunefi from '@/images/clients/immunefi.svg'
+import immunefiDark from '@/images/clients/immunefi-dark.svg'
+
 import olimpx from '@/images/clients/olimpx.svg'
 import trustblock from '@/images/clients/trustblock.svg'
 
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-import HeroSection from '@/components/HeroSection'
-import Hero from '@/components/Hero'
 import Carousel from '@/components/Caroussel'
 import HeroMockup from '@/components/HeroWithMockup'
 import Header from '@/components/Header'
+import Podcasts from '@/components/LatestVideos'
+import MemberTestimonial from '@/components/MemberTestimonial'
 
 const clients = [
   ['guardianAudits', guardianaudits, "https://guardianaudits.com/"],
@@ -38,7 +38,7 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 max-w-[90%] mx-auto rounded-4xl bg-neutral-950 py-10 sm:mt-32 sm:py-24 lg:mt-24">
+    <div className="mt-12 max-w-[90%] mx-auto rounded-4xl bg-neutral-950 py-4 sm:mt-22 sm:py-12 lg:mt-12">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -131,14 +131,13 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
-        className="mt-24 sm:mt-32 lg:mt-40"
+        eyebrow="Our Community"
+        title="We have all the Blockchain Content you may possible need."
+        className="mt-12 sm:mt-22 lg:mt-32"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
-        </p>
+          We're a community of engineers, crypto enthusiasts, and blockchain researchers.
+          </p>
       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
@@ -190,18 +189,17 @@ export default async function Home() {
     <>
     <Header />
     <HeroMockup />
-      <Carousel />    
       <Clients />
+      <Podcasts />
       <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        className="mt-14 sm:mt-22 lg:mt-20"
+        client={{ name: 'Phobia', logo: immunefiDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        Open sense has been the best place to find security specialists and also to share our content about deep blockchain and technichal stuff.
       </Testimonial>
 
       <Services />
+      <MemberTestimonial />
 
       <ContactSection />
     </>

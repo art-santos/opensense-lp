@@ -39,7 +39,7 @@ export default function Hero() {
             {/* Content */}
             <div className="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
               {/* Copy */}
-              <h1 className="h1 text-7xl font-bold font-display text-slate-100 mb-6" data-aos="fade-right" data-aos-delay="100">
+              <h1 className="h1 text-7xl font-bold font-display text-slate-700 mb-6" data-aos="fade-right" data-aos-delay="100">
                We're not{' '}
                 <span className="font-permanent-marker !font-7xl ml-5 text-red-500 font-normal whitespace-nowrap">
                   A{' '}
@@ -62,7 +62,7 @@ export default function Hero() {
                   </span>
                 </span>
               </h1>
-              <p className="text-4xl font-medium font-display text-slate-200 mb-8" data-aos="fade-right" data-aos-delay="200">
+              <p className="text-4xl font-medium font-display text-slate-700 mb-8" data-aos="fade-right" data-aos-delay="200">
               We're a <strong className='text-white'>community</strong> to promote open blockchain science, security and education
               </p>
               {/* Buttons */}

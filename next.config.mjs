@@ -15,7 +15,7 @@ import { withContentlayer } from 'next-contentlayer'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com','i.ytimg.com','ytimg.com'],
 },
 }
 

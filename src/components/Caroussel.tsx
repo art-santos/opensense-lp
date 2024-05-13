@@ -64,11 +64,12 @@ export default function Carousel() {
                 <div className="swiper-slide h-auto flex flex-col max-w-[446px] group">
                   <a href="#0">
                     <div className="group-odd:rotate-1 group-even:-rotate-1">
-                      <div className="absolute inset-0 -z-10">
+                      <div className="absolute  inset-0 max-h-[100px] -z-10">
                         <Image
-                          className="w-full object-cover rounded-3xl"
-                          src={Carousel01}
+                          className="w-full object-cover h-10 border-2 rounded-3xl"
+                          src={"https://i.ytimg.com/vi/DySpPB3079k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAmPsm4_AYuDkVM65RfL7y2Eo89Q"}
                           width={446}
+                          height={200}
                           alt="Carousel 01"
                         />
                       </div>

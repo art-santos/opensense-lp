@@ -73,8 +73,8 @@ export default function HeroMockup() {
                   </span>
                 </span>
               </h1>
-              <p className="text-4xl font-medium font-display text-slate-200 mb-8" data-aos="fade-right" data-aos-delay="200">
-              We're a <strong className='text-white'>community</strong> to promote open blockchain science, security and education
+              <p className="text-4xl font-medium font-display text-slate-700 mb-8" data-aos="fade-right" data-aos-delay="200">
+              We're a <strong className='text-slate-800'>community</strong> to promote open blockchain science, security and education
               </p>
               {/* Buttons */}
               <div
