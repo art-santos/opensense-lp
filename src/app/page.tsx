@@ -27,6 +27,8 @@ import HeroMockup from '@/components/HeroWithMockup'
 import Header from '@/components/Header'
 import Podcasts from '@/components/LatestVideos'
 import MemberTestimonial from '@/components/MemberTestimonial'
+import Stepped from '@/components/Stepped'
+import Footer from '@/components/Footer'
 
 const clients = [
   ['guardianAudits', guardianaudits, "https://guardianaudits.com/"],
@@ -38,7 +40,7 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-12 max-w-[90%] mx-auto rounded-4xl bg-neutral-950 py-4 sm:mt-22 sm:py-12 lg:mt-12">
+    <div className="mt-12 max-w-7xl mx-2 px-2 md:mx-auto rounded-4xl bg-neutral-950 py-8 sm:mt-22 sm:py-12 lg:mt-12">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -49,7 +51,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-5"
+            className="mt-10 grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-5"
           >
             {clients.map(([client, logo]) => (
               <li key={client} className='mx-auto my-auto justify-center text-center'>
@@ -142,7 +144,7 @@ function Services() {
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+            <FadeIn className="w-96 flex-none lg:w-[45rem]">
               <StylizedImage
                 src={imageLaptop}
                 sizes="(min-width: 1024px) 41rem, 31rem"
@@ -151,24 +153,20 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
-            </ListItem>
-            <ListItem title="Application development">
+            <ListItem title="Education">
               We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+              Blockchain technologies, we exchange knowledge and learn from each other.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Science">
+              The best researchers who are always looking for the latest
+              blockchain technologies and how they can be used are here.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Security">
+              
+              We are in contact with audits and rewards for all the companies in the blockchain space so you can learn about and put into practice.
+            </ListItem>
+            <ListItem title="Community">
+              We have daily calls and a community that is always active and ready to help you with any questions you may have.
             </ListItem>
           </List>
         </div>
@@ -197,11 +195,10 @@ export default async function Home() {
       >
         Open sense has been the best place to find security specialists and also to share our content about deep blockchain and technichal stuff.
       </Testimonial>
-
+      <Stepped />
       <Services />
       <MemberTestimonial />
-
-      <ContactSection />
+      <Footer />
     </>
   )
 }

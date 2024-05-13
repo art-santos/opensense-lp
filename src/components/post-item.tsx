@@ -4,6 +4,7 @@ import PlaySvg from '@/public/images/play-02.svg'
 import PostDate from './post-date'
 
 export default function PostItem({ ...props }) {
+  console.log(props)
   return (
     <div
       className="sm:flex items-center p-5 border-b border-slate-100"
@@ -21,7 +22,7 @@ export default function PostItem({ ...props }) {
         </div>
       </div>
       <div className="shrink-0 sm:ml-5">
-        <Link href={props.slug} aria-label="play">
+        <Link href={props._id} aria-label="play">
           <Image src={PlaySvg} width={40} height={40}  alt="Play" aria-hidden="true" />
         </Link>
       </div>

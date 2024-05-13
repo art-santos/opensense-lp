@@ -1,40 +1,45 @@
 "use client";
 import React from "react";
 import { AnimatedTooltip } from "./AnimatedTooltip";
+import Image from "next/image";
+import Avatar01 from '@/public/images/avatar-01.jpg'
+import nft1 from '@/public/images/nft/nft.jpg'
 const people = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "Guilherme",
+    designation: "FrontEnd Developer",
     image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+    nft1.src,
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Robert",
+    designation: "Solidity Developer",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    nft1.src,
   },
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "Sean",
+    designation: "Blockchain Researcher",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    nft1.src,
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "UX Designer",
+    name: "Joseph",
+    designation: "Smart Contrat Hacker",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      nft1.src,
   },
 ];
 
 export function AnimatedTooltipPreview() {
+  console.log(nft1.src, "e")
   return (
     <div className="flex flex-row items-center justify-center mb-10 w-full">
+
       <AnimatedTooltip items={people} />
       <div className="text-lg text-white font-bold ml-8 ">+120K</div>
 

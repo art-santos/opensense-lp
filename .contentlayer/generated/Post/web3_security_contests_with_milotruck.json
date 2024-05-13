@@ -1,0 +1,20 @@
+{
+  "title": "Web 3 Security Contests with Milotruck",
+  "publishedAt": "2024-01-18T00:00:00.000Z",
+  "image": "/images/podcast-01.jpg",
+  "bg": "/images/podcast-single.png",
+  "audio": "/audio/audio.mp3",
+  "episode": "99",
+  "category": "Hacking",
+  "summary": "One name stands out in 2023: Milotruck, your top smart-contract auditor. With a track record that speaks volumes, Milotruck has dominated the field with consecutive first-place victories in some of the most prestigious auditing contests. Watch as Milotruck breaks down his approach to securing smart-contracts.",
+  "_id": "https://www.youtube.com/watch?v=DySpPB3079k",
+  "_raw": {
+    "sourceFilePath": "web3_security_contests_with_milotruck.mdx",
+    "sourceFileName": "web3_security_contests_with_milotruck.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "web3_security_contests_with_milotruck"
+  },
+  "type": "Post",
+  "slug": "web3_security_contests_with_milotruck"
+}

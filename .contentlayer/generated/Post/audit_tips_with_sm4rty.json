@@ -1,0 +1,20 @@
+{
+  "title": "Into Speaking as a Developer, Part 2",
+  "publishedAt": "2023-05-24T00:00:00.000Z",
+  "image": "/images/podcast-01.jpg",
+  "bg": "/images/podcast-single.png",
+  "audio": "/audio/audio.mp3",
+  "episode": "234",
+  "category": "Indie Stories",
+  "summary": "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio.",
+  "_id": "into-public-speaking-as-a-developer-part-2.mdx",
+  "_raw": {
+    "sourceFilePath": "into-public-speaking-as-a-developer-part-2.mdx",
+    "sourceFileName": "into-public-speaking-as-a-developer-part-2.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "into-public-speaking-as-a-developer-part-2"
+  },
+  "type": "Post",
+  "slug": "into-public-speaking-as-a-developer-part-2"
+}

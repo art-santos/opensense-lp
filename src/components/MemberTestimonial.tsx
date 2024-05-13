@@ -1,11 +1,13 @@
+import nft1 from '@/public/images/nft/nft.jpg'
+
 const testimonials = [
     {
-      body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+      body: 'Finding a community of like-minded developers has been a game-changer for me. The support and knowledge-sharing that happens here is amazing!',
       author: {
-        name: 'Leslie Alexander',
-        handle: 'lesliealexander',
+        name: 'Guilhermo',
+        handle: 'Solidity Engineer',
         imageUrl:
-          'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+         nft1.src,
       },
     },
     // More testimonials...
@@ -16,9 +18,10 @@ const testimonials = [
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl text-center">
-            <h2 className="text-lg font-semibold font-display leading-8 tracking-tight text-indigo-600">Testimonials</h2>
+            <h2 className="text-lg font-semibold font-display leading-8 tracking-tight text-slate-600">Testimonials</h2>
             <p className="mt-2 text-3xl font-bold font-display tracking-tight text-gray-900 sm:text-4xl">
-              We have worked with thousands of amazing people
+            What our members are saying
+
             </p>
           </div>
           <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">

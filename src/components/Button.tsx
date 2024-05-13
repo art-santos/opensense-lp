@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
 
 type ButtonProps = {
   invert?: boolean
@@ -18,7 +19,7 @@ export function Button({
     className,
     'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition',
     invert
-      ? 'bg-white text-neutral-950 hover:bg-neutral-200'
+      ? 'bg-neutral-200 text-neutral-950 hover:bg-neutral-200'
       : 'bg-neutral-950 text-white hover:bg-neutral-800',
   )
 
@@ -27,6 +28,7 @@ export function Button({
   if (typeof props.href === 'undefined') {
     return (
       <button className={className} {...props}>
+        
         {inner}
       </button>
     )
@@ -34,6 +36,7 @@ export function Button({
 
   return (
     <Link className={className} {...props}>
+     {invert ?<FaGithub className="mr-2 mt-1"  />  : <FaXTwitter className="mr-2 mt-1"  />}
       {inner}
     </Link>
   )

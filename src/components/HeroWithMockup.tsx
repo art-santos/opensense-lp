@@ -8,6 +8,7 @@ import { HeroHighlight } from './HeroHighlight'
 import { Button } from './MovingBorder'
 import { RxDiscordLogo } from 'react-icons/rx'
 import { AnimatedTooltipPreview } from './AnimatedTooltipDemo'
+import Link from 'next/link'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -47,8 +48,8 @@ export default function HeroMockup() {
           </svg>
           <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
         </svg>
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-        <div className="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+        <div className="md:w-[640px] py-12 px-2 md:py-20 md:min-h-[480px]">
               {/* Copy */}
               <h1 className="h1 text-7xl font-bold font-display text-slate-900 mb-6" data-aos="fade-right" data-aos-delay="100">
                We're not{' '}
@@ -83,15 +84,24 @@ export default function HeroMockup() {
                 data-aos-delay="300"
               >
                 <div>
-                <Button
+                {/* <Button
                         borderRadius="1.75rem"
                         className="bg-white dark:bg-slate-900 font-display font-medium text-xl text-black dark:text-white border-slate-500 dark:border-slate-800"
                     >
+                      <Link href="https://discord.gg/opensense">
+                     */}
+
+                      <Button
+                        borderRadius="1.75rem"
+                        className="bg-white dark:bg-slate-900 font-display font-medium text-xl text-black dark:text-white border-slate-500 dark:border-slate-800"
+                        onClick={() => window.open("https://discord.gg/opensense")} 
+                   >
                         <RxDiscordLogo size={"25px"}/>
 
                        <span className="ml-2">Join Us</span>
                        <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
                     </Button>
+                    
 
                 </div>
                 <div className="sm:flex sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-3">

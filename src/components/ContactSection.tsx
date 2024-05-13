@@ -1,7 +1,11 @@
-import { Button } from '@/components/Button'
+"use client";
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
+import { Button } from './MovingBorder'
+import { RxDiscordLogo } from 'react-icons/rx'
+import { ArrowRightCircleIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export function ContactSection() {
   return (
@@ -10,21 +14,22 @@ export function ContactSection() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              Tell us about your project
+              Join us Now
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" invert>
-                Say Hej
-              </Button>
-            </div>
-            <div className="mt-10 border-t border-white/10 pt-10">
-              <h3 className="font-display text-base font-semibold text-white">
-                Our offices
-              </h3>
-              <Offices
-                invert
-                className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-              />
+                    <Button
+                        borderRadius="1.75rem"
+                        className="bg-white dark:bg-slate-900 font-display font-medium text-xl text-black dark:text-white border-slate-500 dark:border-slate-800"
+                   >
+                                  <Link href="https://discord.gg/opensense">
+
+                        <RxDiscordLogo size={"25px"}/>
+
+                       <span className="ml-2">Join Us</span>
+                       <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
+                       </Link>
+
+                    </Button>
             </div>
           </div>
         </div>
